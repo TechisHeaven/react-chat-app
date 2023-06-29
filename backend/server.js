@@ -37,6 +37,9 @@ else{
   app.get("/", (req, res) => {
     res.send("API is running");
   });
+  app.get("/api/test", (req, res) => {
+    res.send("API is test running");
+  });
 }
 
 
@@ -63,6 +66,8 @@ app.get("/api/chat/:id", (req, res) => {
 const server = app.listen(PORT || 5000, () =>
   console.log(`Listening on port ${PORT}`.yellow.bold)
 );
+
+
 
 // const io = new WebSocket("ws://mern-chat-app-p6sj.onrender.com");
 // here fix may be
